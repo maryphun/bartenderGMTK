@@ -166,6 +166,14 @@ public class WindowManager : Singleton<WindowManager>
             comp.SetTextAlignment(alignment);
         }
     }
+    public void SetTextWrappingMode(string name, bool enable)
+    {
+        Window comp;
+        if (GetReference(name, out comp))
+        {
+            comp.SetTextWrappingMode(enable);
+        }
+    }
 
     public void AddNewText(string name, string text, Vector2 location, float size, Color color)
     {

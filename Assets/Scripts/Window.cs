@@ -316,6 +316,11 @@ public class Window : MonoBehaviour
         }
     }
 
+    public void SetTextWrappingMode(bool enable)
+    {
+        dialogText.enableWordWrapping = enable;
+    }
+
     // Add new texts
     public void AddNewText(string newText, Vector2 location, float size, Color color)
     {

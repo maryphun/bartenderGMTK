@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameStateManager : MonoBehaviour
 {
     [SerializeField] DialogueManager dialogueManager;
+    [SerializeField] DrinkManager drinkManager;
 
     private bool dialogueRegistered;
 
@@ -19,6 +20,15 @@ public class GameStateManager : MonoBehaviour
         else
         {
             dialogueManager.Initialization();
+        }
+
+        if (drinkManager == null)
+        {
+            Debug.Log("<color=red>drinkManager reference not found.</color>");
+        }
+        else
+        {
+            drinkManager.Initialization();
         }
     }
 

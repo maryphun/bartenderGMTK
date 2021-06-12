@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ccf6dba79495941afe64c0cb20c861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windowName: drinkbutton
 --- !u!1 &494368209
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 494368210}
+  drinkManager: {fileID: 60078042}
 --- !u!4 &557210933
 Transform:
   m_ObjectHideFlags: 0

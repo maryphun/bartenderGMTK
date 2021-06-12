@@ -90,11 +90,12 @@ public class DialogueManager : MonoBehaviour
                         closeSpeed = !ShouldCloseNameWindow() ? 0.0f : windowOpenSpeed;
                         WindowManager.Instance.Close(currentDialogueName + "(name)", closeSpeed, true);
                     }
-                    StartCoroutine(NextDialogueDelay(closeSpeed));
+                    isShowingDialogue = false;
                 }
             }
         }
-        else if (dialogueList.Count > 0)    // there are no dialogue showing, and there are registered dialogue left.
+        
+        if (!isShowingDialogue && dialogueList.Count > 0)    // there are no dialogue showing, and there are registered dialogue left.
         {
             float openSpeed = isFirstDialogue ? windowOpenSpeed : 0.0f;
             // instantiate new window
@@ -105,6 +106,7 @@ public class DialogueManager : MonoBehaviour
             WindowManager.Instance.SetText(currentDialogueName, dialogueList[0].text, typeWriterInterval);
             WindowManager.Instance.SetTextSize(currentDialogueName, textSize);
             WindowManager.Instance.SetTextAlignment(currentDialogueName, CustomTextAlignment.topLeft);
+            WindowManager.Instance.SetTextWrappingMode(currentDialogueName, true);
             // show name
             if (dialogueList[0].name.Length > 0)
             {
@@ -116,6 +118,7 @@ public class DialogueManager : MonoBehaviour
                 WindowManager.Instance.SetTextSize(currentDialogueName + "(name)", nameSize);
                 WindowManager.Instance.SetTextOffset(currentDialogueName + "(name)", nameOffset);
                 WindowManager.Instance.SetTextAlignment(currentDialogueName + "(name)", CustomTextAlignment.center);
+                WindowManager.Instance.SetTextWrappingMode(currentDialogueName + "(name)", false);
             }
             // show portrait
             if (dialogueList[0].portrait.Length > 0)
