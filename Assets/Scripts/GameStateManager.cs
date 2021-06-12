@@ -52,13 +52,14 @@ public class GameStateManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && currentDialog == 0 && showedDialog < 0)
         {
-            dialogueManager.RegisterDialogue("It's 7 o'clock. Bar is open.");
-            dialogueManager.RegisterDialogue("This is a place where people go to drink and social.");
-            dialogueManager.RegisterDialogue("Your job is to provide the service, listen to what they say, ");
-            dialogueManager.RegisterDialogue("and finally, make a perfect cocktail you think they need at the moment.");
+            dialogueManager.RegisterDialogue("It's 7 o'clock in the evening. The Traverse Bar is open.");
+            dialogueManager.RegisterDialogue("This is a place where people go to drink and socialize.");
+            dialogueManager.RegisterDialogue("Your job is to provide entertainment and fulfill the customer's needs.");
+            dialogueManager.RegisterDialogue("Last but not least, create a suitable cocktail that suites the mood.");
             dialogueManager.RegisterDialogue("Ever heard of cocktails?");
-            dialogueManager.RegisterDialogue("An alchoholic drink, and some other ingredients.");
-            dialogueManager.RegisterDialogue("All those ingredients, They +JOIN TOGETHER+.");
+            dialogueManager.RegisterDialogue("It's an alchoholic beverage with different methods of preparation.");
+            dialogueManager.RegisterDialogue("By using several types of ingredients, they +JOIN TOGETHER+ to create a symphony of " +
+                                             "relaxation as it calms the mood of the consumer.");
             dialogueManager.RegisterDialogue("And here it is! You get a cocktail.");
             showedDialog++;
             return;
@@ -77,6 +78,7 @@ public class GameStateManager : MonoBehaviour
         if (currentDialog == 2 && showedDialog < 2)
         {
             dialogueManager.RegisterDialogue("As a warm up for the day, let's make something for yourself.");
+            dialogueManager.RegisterDialogue("What is the best drink you think that will represent your feeling right now?");
             DialogEnded();
             showedDialog++;
             return;

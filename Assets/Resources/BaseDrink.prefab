@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2203739589853360734}
   - component: {fileID: 7011227681303774735}
   - component: {fileID: 6398373030396900667}
+  - component: {fileID: 5623395941108728793}
+  - component: {fileID: 6388823512047036454}
   m_Layer: 5
   m_Name: Drink5
   m_TagString: Untagged
@@ -122,6 +124,46 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!61 &5623395941108728793
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141144430586865328}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 187}
+  m_EdgeRadius: 0
+--- !u!114 &6388823512047036454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141144430586865328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: "\u014Cdachi helps +calming down+ ones mood while provides a %soothing%
+    sensation with a little $bitter$ flavor."
 --- !u!1 &189370935424922284
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Twilight
+  m_text: Black Magic
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}
   m_sharedMaterial: {fileID: -6606262383095326318, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}
@@ -819,6 +861,8 @@ GameObject:
   - component: {fileID: 3898825626278747661}
   - component: {fileID: 3898825626278747660}
   - component: {fileID: 3898825626278747663}
+  - component: {fileID: 7003694128254377954}
+  - component: {fileID: 521285614905969949}
   m_Layer: 5
   m_Name: Drink1
   m_TagString: Untagged
@@ -929,6 +973,46 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7003694128254377954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626278747657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Fairies Kiss provides a %bizzare% flavor. It's a +hapiness+ you can
+    taste. People who don't like $sweet$ stuff won't be a fan of this.
+--- !u!61 &521285614905969949
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626278747657}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 187}
+  m_EdgeRadius: 0
 --- !u!1 &3898825626323032312
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,6 +1025,8 @@ GameObject:
   - component: {fileID: 3898825626323032316}
   - component: {fileID: 3898825626323032319}
   - component: {fileID: 3898825626323032318}
+  - component: {fileID: 3435404461834730412}
+  - component: {fileID: 5574955750423973671}
   m_Layer: 5
   m_Name: Drink2
   m_TagString: Untagged
@@ -1051,6 +1137,46 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!61 &3435404461834730412
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626323032312}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 187}
+  m_EdgeRadius: 0
+--- !u!114 &5574955750423973671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626323032312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Black magic provides a %heart warming% sensation. It helps +brighten+
+    up ones mood. Not great for people who dislike $hot$ beverages.
 --- !u!1 &3898825627216785049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1310,8 @@ GameObject:
   - component: {fileID: 7019002187307432708}
   - component: {fileID: 6223934109935089333}
   - component: {fileID: 9135389458950341353}
+  - component: {fileID: 5137196622643576185}
+  - component: {fileID: 4896291624080919014}
   m_Layer: 5
   m_Name: Drink3
   m_TagString: Untagged
@@ -1294,6 +1422,46 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!61 &5137196622643576185
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615063800729215583}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 187}
+  m_EdgeRadius: 0
+--- !u!114 &4896291624080919014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615063800729215583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Goblin piss provide a %tingly% sensation. It gives one a pleasant
+    +surpsie+ feeling when drink. It is $zesty$.
 --- !u!1 &4966648264262128107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,6 +1604,8 @@ GameObject:
   - component: {fileID: 2242040524374622027}
   - component: {fileID: 3729197347333652268}
   - component: {fileID: 9209691002912588440}
+  - component: {fileID: 5906172382129542311}
+  - component: {fileID: 9061636143055040928}
   m_Layer: 5
   m_Name: Drink4
   m_TagString: Untagged
@@ -1546,6 +1716,46 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!61 &5906172382129542311
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918868477624967307}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 187}
+  m_EdgeRadius: 0
+--- !u!114 &9061636143055040928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918868477624967307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Crystal Maiden presents as a %bubbly% concoction. It makes ones mood
+    to feels overly +excited+! Not great for people who dislike $gassy$ beverages.
 --- !u!1 &6985647100900450252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,7 +1971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ecstasy Delight
+  m_text: Goblin Piss
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}
   m_sharedMaterial: {fileID: -6606262383095326318, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}
@@ -2163,7 +2373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LongIsland
+  m_text: Fairies Kiss
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}
   m_sharedMaterial: {fileID: -6606262383095326318, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}

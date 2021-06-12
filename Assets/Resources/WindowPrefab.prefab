@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 2033996073067760177}
   - component: {fileID: 7913426964632373461}
   - component: {fileID: 7186485696986064686}
-  - component: {fileID: 898028082273677619}
   - component: {fileID: 6128875762230335312}
   m_Layer: 5
   m_Name: Fill
@@ -286,19 +285,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &898028082273677619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6182076104649113172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e21c7e36b8200439eb254a112f2855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseImage: {fileID: 0}
 --- !u!114 &6128875762230335312
 MonoBehaviour:
   m_ObjectHideFlags: 0

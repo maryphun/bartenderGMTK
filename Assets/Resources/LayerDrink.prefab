@@ -2029,7 +2029,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Coke
+  m_text: Poison
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}
   m_sharedMaterial: {fileID: -6606262383095326318, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}

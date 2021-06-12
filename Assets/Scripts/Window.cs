@@ -192,9 +192,10 @@ public class Window : MonoBehaviour
         int currentCount = 0;
         string patternDetect = string.Empty;
         string text = string.Empty;
-        bool highlight = false;
+        bool[] highlight = new bool[3];
+        for (int i = 0; i < 3; i++) highlight[i] = false;
 
-        isTypeWrting = true;
+         isTypeWrting = true;
 
         while (currentCount <= wordCount)
         {
@@ -202,17 +203,41 @@ public class Window : MonoBehaviour
             float waitTime = isSkipTypeWriter ?  0.0f : interval;
 
             // process text
-            if (CheckHighlight(newText[currentCount].ToString()))
+            if (CheckHighlightOrange(newText[currentCount].ToString()))
             {
-                if (!highlight)
+                if (!highlight[0])
                 {
-                    text = text + "<color=red>";
+                    text = text + "<color=orange>";
                 }
                 else
                 {
                     text = text + "</color>";
                 }
-                highlight = !highlight;
+                highlight[0] = !highlight[0];
+            }
+            else if (CheckHighlightTeal(newText[currentCount].ToString()))
+            {
+                if (!highlight[1])
+                {
+                    text = text + "<color=green>";
+                }
+                else
+                {
+                    text = text + "</color>";
+                }
+                highlight[1] = !highlight[1];
+            }
+            else if (CheckHighlightYellow(newText[currentCount].ToString()))
+            {
+                if (!highlight[2])
+                {
+                    text = text + "<color=yellow>";
+                }
+                else
+                {
+                    text = text + "</color>";
+                }
+                highlight[2] = !highlight[2];
             }
             else
             {
@@ -220,7 +245,7 @@ public class Window : MonoBehaviour
             }
 
             // update text
-            if (highlight)
+            if (highlight[0] || highlight[1] || highlight[2])
             {
                 SetText(text + "</color>");
             }
@@ -302,9 +327,24 @@ public class Window : MonoBehaviour
         return (pattern.Contains(".") || pattern.Contains("。") || pattern.Contains("?") || pattern.Contains("!"));
     }
 
-    private bool CheckHighlight(string pattern)
+    private void CheckHighlights(string pattern)
+    {
+        
+    }
+
+    private bool CheckHighlightOrange(string pattern)
     {
         return (pattern.Contains("+"));
+    }
+
+    private bool CheckHighlightTeal(string pattern)
+    {
+        return (pattern.Contains("%"));
+    }
+
+    private bool CheckHighlightYellow(string pattern)
+    {
+        return (pattern.Contains("$"));
     }
 
     public void SetTextOffset(Vector2 offset)
