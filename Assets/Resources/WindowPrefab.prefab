@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 74d9da92ed0fafa4c82b1bb1adceded4, type: 2}
-  m_Color: {r: 0.019607844, g: 0.16078432, b: 0.2, a: 0.94509804}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 7035934189055943068}
   - component: {fileID: 489255167356887473}
   - component: {fileID: 4787981672402301541}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

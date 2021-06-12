@@ -29,6 +29,7 @@ public class GameStateManager : MonoBehaviour
         else
         {
             drinkManager.Initialization();
+            drinkManager.OpenWindow(true);
         }
     }
 

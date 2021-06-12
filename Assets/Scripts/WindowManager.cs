@@ -230,6 +230,17 @@ public class WindowManager : Singleton<WindowManager>
         return false;
     }
 
+    public Window GetWindowObject(string name)
+    {
+        Window comp;
+        if (GetReference(name, out comp))
+        {
+            return comp;
+        }
+
+        return null;
+    }
+
     private bool GetReference(string name, out Window component)
     {
         bool rtn = false;
