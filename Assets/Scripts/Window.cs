@@ -192,6 +192,7 @@ public class Window : MonoBehaviour
         int currentCount = 0;
         string patternDetect = string.Empty;
         string text = string.Empty;
+        bool highlight = false;
 
         isTypeWrting = true;
 
@@ -200,9 +201,33 @@ public class Window : MonoBehaviour
             // initiate wait time
             float waitTime = isSkipTypeWriter ?  0.0f : interval;
 
+            // process text
+            if (CheckHighlight(newText[currentCount].ToString()))
+            {
+                if (!highlight)
+                {
+                    text = text + "<color=red>";
+                }
+                else
+                {
+                    text = text + "</color>";
+                }
+                highlight = !highlight;
+            }
+            else
+            {
+                text = text + newText[currentCount];
+            }
+
             // update text
-            text = text + newText[currentCount];
-            SetText(text);
+            if (highlight)
+            {
+                SetText(text + "</color>");
+            }
+            else
+            {
+                SetText(text);
+            }
 
             // check pattern
             patternDetect = patternDetect + newText[currentCount];
@@ -275,6 +300,11 @@ public class Window : MonoBehaviour
     private bool CheckPeriod(string pattern)
     {
         return (pattern.Contains(".") || pattern.Contains("。") || pattern.Contains("?") || pattern.Contains("!"));
+    }
+
+    private bool CheckHighlight(string pattern)
+    {
+        return (pattern.Contains("+"));
     }
 
     public void SetTextOffset(Vector2 offset)

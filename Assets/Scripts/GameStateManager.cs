@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameStateManager : MonoBehaviour
 {
     [SerializeField] DialogueManager dialogueManager;
     [SerializeField] DrinkManager drinkManager;
+    [SerializeField] Image screenAlpha;
 
-    private bool dialogueRegistered;
+    private int currentDialog, showedDialog;
 
     void Start()
     {
@@ -29,18 +32,68 @@ public class GameStateManager : MonoBehaviour
         else
         {
             drinkManager.Initialization();
-            drinkManager.OpenWindow(true);
+            drinkManager.EnableDrink(false);
         }
+
+        if (screenAlpha == null)
+        {
+            Debug.Log("<color=red>screenAlpha reference not found.</color>");
+        }
+        else
+        {
+            screenAlpha.DOFade(0.0f, 3f);
+        }
+
+        currentDialog = 0;
+        showedDialog = -1;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !dialogueRegistered)
+        if (Input.GetKeyDown(KeyCode.Space) && currentDialog == 0 && showedDialog < 0)
         {
-            dialogueManager.RegisterDialogue("Hello, give me a drink.", "Helaen");
-            dialogueManager.RegisterDialogue("What?");
-            dialogueManager.RegisterDialogue("Hello again!", "Cheebye");
-            dialogueRegistered = true;
+            dialogueManager.RegisterDialogue("It's 7 o'clock. Bar is open.");
+            dialogueManager.RegisterDialogue("This is a place where people go to drink and social.");
+            dialogueManager.RegisterDialogue("Your job is to provide the service, listen to what they say, ");
+            dialogueManager.RegisterDialogue("and finally, make a perfect cocktail you think they need at the moment.");
+            dialogueManager.RegisterDialogue("Ever heard of cocktails?");
+            dialogueManager.RegisterDialogue("An alchoholic drink, and some other ingredients.");
+            dialogueManager.RegisterDialogue("All those ingredients, They +JOIN TOGETHER+.");
+            dialogueManager.RegisterDialogue("And here it is! You get a cocktail.");
+            showedDialog++;
+            return;
         }
+
+        if (currentDialog == 1 && showedDialog < 1)
+        {
+            drinkManager.OpenWindow(true);
+            drinkManager.EnableDrink(true);
+            StartCoroutine(Wait(1.5f));
+            DialogEnded();
+            showedDialog++;
+            return;
+        }
+
+        if (currentDialog == 2 && showedDialog < 2)
+        {
+            dialogueManager.RegisterDialogue("As a warm up for the day, let's make something for yourself.");
+            DialogEnded();
+            showedDialog++;
+            return;
+        }
+    }
+
+    private IEnumerator Wait(float time)
+    {
+        enabled = false;
+
+        yield return new WaitForSeconds(time);
+
+        enabled = true;
+    }
+
+    public void DialogEnded()
+    {
+        currentDialog++;
     }
 }

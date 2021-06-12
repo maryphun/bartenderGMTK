@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] GameStateManager gameStateManager;
     [SerializeField] string windowName = "DialogueBox";
     [SerializeField, Range(0.0f, 128f)] float nameSize = 64f;
     [SerializeField] Color nameColor = Color.cyan;
@@ -91,6 +92,12 @@ public class DialogueManager : MonoBehaviour
                         WindowManager.Instance.Close(currentDialogueName + "(name)", closeSpeed, true);
                     }
                     isShowingDialogue = false;
+
+                    if (dialogueList.Count == 0)
+                    {
+                        StartCoroutine(NextDialogueDelay(windowOpenSpeed));
+                        isFirstDialogue = true;
+                    }
                 }
             }
         }
@@ -141,7 +148,7 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        isShowingDialogue = false;
+        gameStateManager.DialogEnded();
     }
 
     private bool IsLastDialogue()
