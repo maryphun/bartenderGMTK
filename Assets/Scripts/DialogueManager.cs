@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] GameStateManager gameStateManager;
+    [SerializeField] DrinkManager drinkManager;
+
+    [Header("Parameters")]
     [SerializeField] string windowName = "DialogueBox";
     [SerializeField, Range(0.0f, 128f)] float nameSize = 64f;
     [SerializeField] Color nameColor = Color.cyan;
@@ -13,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField, Range(0.0f, 1f)] float windowOpenSpeed = 0.5f;
     [SerializeField, Range(0.0f, 128f)] float textSize = 64f;
 
+    // private
     private Vector2 windowPos, windowSize, nameWindowPos, nameWindowSize, portraitPos, portraitSize, facePos, faceSize;
     private bool isShowingDialogue, isFirstDialogue, isNameWindowClosed;
     private int indexCount;
@@ -97,6 +102,12 @@ public class DialogueManager : MonoBehaviour
                     {
                         StartCoroutine(NextDialogueDelay(windowOpenSpeed));
                         isFirstDialogue = true;
+                        // Enable drink menu
+                        if (isFirstDialogue)
+                        {
+                            drinkManager.GetDrinkMenu().EnableButton(true);
+                            drinkManager.EnableDrink(true);
+                        }
                     }
                 }
             }
@@ -137,6 +148,12 @@ public class DialogueManager : MonoBehaviour
             {
                 WindowManager.Instance.AddNewImage(currentDialogueName, "Face/" + dialogueList[0].face, facePos, faceSize, false);
             }
+            // Disable drink menu
+            if (isFirstDialogue)
+            {
+                drinkManager.GetDrinkMenu().EnableButton(false);
+                drinkManager.EnableDrink(false);
+            }
             // registered dialogue list
             dialogueList.RemoveAt(0);
             isShowingDialogue = true;
@@ -167,6 +184,11 @@ public class DialogueManager : MonoBehaviour
             // check if next dialogue have a name
             return dialogueList[0].name.Length == 0;
         }
+    }
+
+    public bool IsShowingDialogue()
+    {
+        return isShowingDialogue;
     }
 }
 

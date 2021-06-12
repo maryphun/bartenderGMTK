@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class DrinkMenu : MonoBehaviour
@@ -18,6 +19,66 @@ public class DrinkMenu : MonoBehaviour
         drinkManager.EnableDrink(false, windowName);
         drinkManager.EnableDrink(true, otherWindowName);
         StartCoroutine(Change());
+    }
+
+    public void OnClickMix()
+    {
+        drinkManager.Mix();
+    }
+
+    public void OnClickFairiesKiss()
+    {
+        drinkManager.FillShaker(0.1f * Time.deltaTime);
+        drinkManager.ChangeParameter(0.05f * Time.deltaTime, -0.05f * Time.deltaTime, 0, 0.01f * Time.deltaTime, -0.01f * Time.deltaTime);
+    }
+
+    public void OnClickBlackMagic()
+    {
+        drinkManager.FillShaker(0.1f * Time.deltaTime);
+        drinkManager.ChangeParameter(-0.05f * Time.deltaTime, 0.05f * Time.deltaTime, -0.005f * Time.deltaTime, -0.025f * Time.deltaTime, -0.01f * Time.deltaTime);
+    }
+
+    public void OnClickGoblinPiss()
+    {
+        drinkManager.FillShaker(0.1f * Time.deltaTime);
+        drinkManager.ChangeParameter(0.01f * Time.deltaTime, -0.01f * Time.deltaTime, 0.05f * Time.deltaTime, 0.012f * Time.deltaTime, 0.012f * Time.deltaTime);
+    }
+
+    public void OnClickCrystalMaiden()
+    {
+        drinkManager.FillShaker(0.1f * Time.deltaTime);
+        drinkManager.ChangeParameter(0, 0, 0, 0.05f * Time.deltaTime, -0.01f * Time.deltaTime);
+    }
+
+    public void OnClickOdachi()
+    {
+        drinkManager.FillShaker(0.1f * Time.deltaTime);
+        drinkManager.ChangeParameter(-0.05f * Time.deltaTime, -0.01f * Time.deltaTime, 0, -0.01f * Time.deltaTime, 0.05f * Time.deltaTime);
+    }
+
+    public void OnClickLime()
+    {
+
+    }
+
+    public void OnClickLemon()
+    {
+
+    }
+
+    public void OnClickMint()
+    {
+
+    }
+
+    public void OnClickColoredIceCube()
+    {
+
+    }
+
+    public void OnClickPoison()
+    {
+
     }
 
     private IEnumerator Change()
@@ -43,5 +104,14 @@ public class DrinkMenu : MonoBehaviour
         drinkManager = managerReference;
         windowName = name;
         otherWindowName = drinkManager.GetOtherName(name);
+    }
+
+    public void EnableButton(bool boolean)
+    {
+        var tmp = FindObjectsOfType<Button>();
+        foreach (Button btn in tmp)
+        {
+            btn.interactable = boolean;
+        }
     }
 }

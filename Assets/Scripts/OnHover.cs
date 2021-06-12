@@ -17,7 +17,7 @@ public class OnHover : MonoBehaviour
     void OnMouseEnter()
     {
         mousehovering = true;
-        hoveringTimeCount = 0.0f;
+        hoveringTimeCount = -0.0f;
         lastMousePoint = Input.mousePosition;
     }
 
@@ -25,6 +25,18 @@ public class OnHover : MonoBehaviour
     {
         if (!mousehovering)
         {
+            return;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            hoveringTimeCount = 0.0f;
+            mousehovering = false;
+            if (isShowingExplaination)
+            {
+                isShowingExplaination = false;
+                EnableExplaination(isShowingExplaination);
+            }
             return;
         }
 

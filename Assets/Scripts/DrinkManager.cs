@@ -6,13 +6,29 @@ using DG.Tweening;
 
 public class DrinkManager : MonoBehaviour
 {
+    [Header("Parameter")]
     [SerializeField] string windowNameBase;
     [SerializeField] string windowNameLayer;
+    [SerializeField, Range(0.0f, 1.0f)] float alphaAfterDisable = 0.15f;
+    [SerializeField, Range(0.0f, 1.0f)] float liquidFillPercentageMin = 0.9f;
+
+    [Header("References")]
     [SerializeField] GameObject buttonsBase;
     [SerializeField] GameObject buttonsLayer;
-    [SerializeField, Range(0.0f, 1.0f)] float alphaAfterDisable = 0.15f;
+    [SerializeField] DialogueManager dialogueManager;
+    [SerializeField] RectTransform liquidFill;
 
+    [Header("Debug")]
+    [SerializeField] private float liquidFillPercentage;
+    [SerializeField] private float _happiness;
+    [SerializeField] private float _sadness;
+    [SerializeField] private float _surprise;
+    [SerializeField] private float _excited;
+    [SerializeField] private float _anger;
+
+    // privates
     private string currentWindowName;
+    private float liquidCount;
 
     public void Initialization()
     {
@@ -34,6 +50,7 @@ public class DrinkManager : MonoBehaviour
 
         // set default
         currentWindowName = windowNameBase;
+        liquidFillPercentage = 0.0f;
     }
 
     public Vector2 GetSize()
@@ -113,5 +130,62 @@ public class DrinkManager : MonoBehaviour
         }
 
         return rtn;
+    }
+
+    public void Mix()
+    {
+        if (liquidFillPercentage >= liquidFillPercentageMin)
+        {
+
+        }
+        else
+        {
+            // not enough.
+            // TODO: play failed SE
+            if (!dialogueManager.IsShowingDialogue())
+            {
+                // Add dialog if possible.
+                string[] randomString = new string[3];
+                randomString[0] = "Not enough ingredients, add more!";
+                randomString[1] = "The drink is not finish yet.";
+                randomString[2] = "No, not yet.";
+                dialogueManager.RegisterDialogue(randomString[Random.Range(0, randomString.Length-1)]);
+            }
+        }
+    }
+
+    public void ChangeParameter(float happy, float sad, float surprise, float excited, float anger)
+    {
+        _happiness += happy;
+        _sadness += sad;
+        _surprise += surprise;
+        _excited += excited;
+        _anger += anger;
+    }
+
+    public void FillShaker(float value)
+    {
+        liquidFillPercentage = Mathf.Clamp(liquidFillPercentage + value, 0.0f, 1.0f);
+    }
+
+    public DrinkMenu GetDrinkMenu(string name = "")
+    {
+        if (name == "")
+        {
+            name = currentWindowName;
+        }
+
+        return WindowManager.Instance.GetWindowObject(name).GetComponentInChildren<DrinkMenu>();
+    }
+
+    private void Update()
+    {
+        // control fill
+        float fillSize = 180f;
+        liquidCount += Time.deltaTime;
+        float fill = liquidFillPercentage + ((liquidFillPercentage * 0.25f) * Mathf.Sin(liquidCount));
+        Debug.Log(Mathf.Sin(liquidCount));
+        liquidFill.sizeDelta = new Vector2(liquidFill.sizeDelta.x, fill * fillSize);
+        liquidFill.anchoredPosition = new Vector2(0, (-fillSize / 2f) + (fill * fillSize /2f));
     }
 }

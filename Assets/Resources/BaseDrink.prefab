@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6398373030396900667}
   - component: {fileID: 5623395941108728793}
   - component: {fileID: 6388823512047036454}
+  - component: {fileID: 7225742094610606248}
   m_Layer: 5
   m_Name: Drink5
   m_TagString: Untagged
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -112,7 +113,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -164,6 +165,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: "\u014Cdachi helps +calming down+ ones mood while provides a %soothing%
     sensation with a little $bitter$ flavor."
+--- !u!114 &7225742094610606248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141144430586865328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHold:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 721164034002435241}
+        m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
+        m_MethodName: OnClickOdachi
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &189370935424922284
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -691,7 +719,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -863,6 +891,7 @@ GameObject:
   - component: {fileID: 3898825626278747663}
   - component: {fileID: 7003694128254377954}
   - component: {fileID: 521285614905969949}
+  - component: {fileID: 8522004480206093665}
   m_Layer: 5
   m_Name: Drink1
   m_TagString: Untagged
@@ -942,7 +971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -961,7 +990,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1013,6 +1042,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 290, y: 187}
   m_EdgeRadius: 0
+--- !u!114 &8522004480206093665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626278747657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHold:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 721164034002435241}
+        m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
+        m_MethodName: OnClickFairiesKiss
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3898825626323032312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1083,7 @@ GameObject:
   - component: {fileID: 3898825626323032318}
   - component: {fileID: 3435404461834730412}
   - component: {fileID: 5574955750423973671}
+  - component: {fileID: 3405130790715666015}
   m_Layer: 5
   m_Name: Drink2
   m_TagString: Untagged
@@ -1106,7 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1125,7 +1182,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1175,8 +1232,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Black magic provides a %heart warming% sensation. It helps +brighten+
-    up ones mood. Not great for people who dislike $hot$ beverages.
+  description: Black magic provides a %heart warming% sensation. It make you think
+    of your old scar, something +sad+ that happened. Not great for people who dislike
+    $hot$ beverages.
+--- !u!114 &3405130790715666015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626323032312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHold:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 721164034002435241}
+        m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
+        m_MethodName: OnClickBlackMagic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3898825627216785049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,7 +1352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1286,7 +1371,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1297,7 +1382,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3898825627216785052}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 721164034002435241}
+        m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
+        m_MethodName: OnClickMix
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4615063800729215583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1409,7 @@ GameObject:
   - component: {fileID: 9135389458950341353}
   - component: {fileID: 5137196622643576185}
   - component: {fileID: 4896291624080919014}
+  - component: {fileID: 4598463488839286631}
   m_Layer: 5
   m_Name: Drink3
   m_TagString: Untagged
@@ -1391,7 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1410,7 +1508,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1462,6 +1560,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Goblin piss provide a %tingly% sensation. It gives one a pleasant
     +surpsie+ feeling when drink. It is $zesty$.
+--- !u!114 &4598463488839286631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615063800729215583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHold:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 721164034002435241}
+        m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
+        m_MethodName: OnClickGoblinPiss
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4966648264262128107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,6 +1731,7 @@ GameObject:
   - component: {fileID: 9209691002912588440}
   - component: {fileID: 5906172382129542311}
   - component: {fileID: 9061636143055040928}
+  - component: {fileID: 4788718756046250003}
   m_Layer: 5
   m_Name: Drink4
   m_TagString: Untagged
@@ -1685,7 +1811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1704,7 +1830,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: e5de5bd4b8175624b916c66d26dd4cb6, type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1756,6 +1882,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Crystal Maiden presents as a %bubbly% concoction. It makes ones mood
     to feels overly +excited+! Not great for people who dislike $gassy$ beverages.
+--- !u!114 &4788718756046250003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918868477624967307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHold:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 721164034002435241}
+        m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
+        m_MethodName: OnClickCrystalMaiden
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6985647100900450252
 GameObject:
   m_ObjectHideFlags: 0
