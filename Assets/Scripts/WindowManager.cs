@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WindowManager : Singleton<WindowManager>
 {
@@ -175,7 +176,16 @@ public class WindowManager : Singleton<WindowManager>
         }
     }
 
-    public void AddNewText(string name, string text, Vector2 location, float size, Color color)
+    public void SetTextEnableSE(string name, bool enable)
+    {
+        Window comp;
+        if (GetReference(name, out comp))
+        {
+            comp.SetTextEnableSE(enable);
+        }
+    }
+
+    public TMP_Text AddNewText(string name, string text, Vector2 location, float size, Color color)
     {
         Window comp;
         if (GetReference(name, out comp))
@@ -185,10 +195,12 @@ public class WindowManager : Singleton<WindowManager>
                 || location.x >= comp.GetWindowSize().x || location.y >= comp.GetWindowSize().y)
             {
                 Debug.Log(location + " text is out of window");
-                return;
+                return null;
             }
-            comp.AddNewText(text, location, size, color);
+            return comp.AddNewText(text, location, size, color);
         }
+
+        return null;
     }
 
     // ====================================Image====================================

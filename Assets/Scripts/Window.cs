@@ -32,10 +32,11 @@ public class Window : MonoBehaviour
     private RectTransform rect;
     private Vector2 windowSize;
     private TMP_Text dialogText;
+    private bool isPlayTypeWriterSE;
     private bool isInitialized;
     private bool isTypeWrting;
     private bool isSkipTypeWriter;
-
+    private int typewriteCnt;
 
     private List<TMP_Text> extraTextList = new List<TMP_Text>();
     private List<Image> extraImageList = new List<Image>();
@@ -49,6 +50,7 @@ public class Window : MonoBehaviour
         dialogText = GetComponentInChildren<TMP_Text>(true);
         extraTextList.Clear();
         windowState = WindiowState.closed;
+        isPlayTypeWriterSE = true;
 
         isInitialized = true;
     }
@@ -265,6 +267,16 @@ public class Window : MonoBehaviour
 
             // update count at the last
             currentCount++;
+
+            // play SE
+            if (isPlayTypeWriterSE)
+            {
+                if (typewriteCnt % 2 == 0)
+                {
+                    AudioManager.Instance.PlaySFX("Typewrite 1", 0.02f);
+                }
+                typewriteCnt++;
+            }
             yield return new WaitForSeconds(waitTime);
         }
 
@@ -390,9 +402,14 @@ public class Window : MonoBehaviour
     {
         dialogText.enableWordWrapping = enable;
     }
+    public void SetTextEnableSE(bool enable)
+    {
+        isPlayTypeWriterSE = enable;
+    }
 
-    // Add new texts
-    public void AddNewText(string newText, Vector2 location, float size, Color color)
+
+    // Add new texts. return reference
+    public TMP_Text AddNewText(string newText, Vector2 location, float size, Color color)
     {
         // create text
         TMP_Text tmp = Instantiate(dialogText.gameObject, transform).GetComponent<TMP_Text>();
@@ -404,6 +421,8 @@ public class Window : MonoBehaviour
         tmp.text = newText;
         tmp.color = color;
         tmp.gameObject.SetActive(windowState == WindiowState.opened);
+
+        return tmp;
     }
 
     public void EnableAllEntraText(bool boolean)
@@ -426,9 +445,6 @@ public class Window : MonoBehaviour
         tmp.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
         tmp.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);
         tmp.GetComponent<RectTransform>().sizeDelta = size;
-
-        int sorting = behindWindow ? -1 : 1;
-        tmp.GetComponent<Canvas>().sortingOrder = sorting * (extraImageList.Count+1);
 
         tmp.color = Color.white;
         tmp.sprite = Resources.Load<Sprite>(path);

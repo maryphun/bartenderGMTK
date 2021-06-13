@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2203739589853360734}
   - component: {fileID: 7011227681303774735}
   - component: {fileID: 6398373030396900667}
-  - component: {fileID: 7381509695757677746}
+  - component: {fileID: 572149571067449238}
+  - component: {fileID: 3312362671782669902}
   m_Layer: 5
   m_Name: Drink5
   m_TagString: Untagged
@@ -122,21 +123,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7011227681303774735}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7381509695757677746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141144430586865328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onHold:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4533190822064266357}
         m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
@@ -150,6 +136,47 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &572149571067449238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141144430586865328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Toxic take from viper's tooth. Deadly for some individual. It is very
+    dangerous but some races that immume to poison say it's really good. Although
+    getting served in most bar, not many bartender know the taste of it at all.
+--- !u!61 &3312362671782669902
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141144430586865328}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 190}
+  m_EdgeRadius: 0
 --- !u!1 &189370935424922284
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +874,8 @@ GameObject:
   - component: {fileID: 3898825626278747661}
   - component: {fileID: 3898825626278747660}
   - component: {fileID: 3898825626278747663}
-  - component: {fileID: 2359586033357663822}
+  - component: {fileID: 5543403294389070818}
+  - component: {fileID: 5644761540522650711}
   m_Layer: 5
   m_Name: Drink1
   m_TagString: Untagged
@@ -957,21 +985,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3898825626278747660}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &2359586033357663822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3898825626278747657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onHold:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4533190822064266357}
         m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
@@ -985,6 +998,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!61 &5543403294389070818
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626278747657}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 190}
+  m_EdgeRadius: 0
+--- !u!114 &5644761540522650711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626278747657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Lime drink with the default zesty flavour.
 --- !u!1 &3898825626323032312
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +1049,8 @@ GameObject:
   - component: {fileID: 3898825626323032316}
   - component: {fileID: 3898825626323032319}
   - component: {fileID: 3898825626323032318}
-  - component: {fileID: 6520023713583377312}
+  - component: {fileID: 8774163988646359765}
+  - component: {fileID: 1070313720691457982}
   m_Layer: 5
   m_Name: Drink2
   m_TagString: Untagged
@@ -1107,21 +1160,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3898825626323032319}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &6520023713583377312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3898825626323032312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onHold:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4533190822064266357}
         m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
@@ -1135,6 +1173,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!61 &8774163988646359765
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626323032312}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 190}
+  m_EdgeRadius: 0
+--- !u!114 &1070313720691457982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898825626323032312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Common yellow beverage with common yellow lemon juice.
 --- !u!1 &3898825627216785049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1357,8 @@ GameObject:
   - component: {fileID: 7019002187307432708}
   - component: {fileID: 6223934109935089333}
   - component: {fileID: 9135389458950341353}
-  - component: {fileID: 8341404096197125557}
+  - component: {fileID: 255618818356462396}
+  - component: {fileID: 1843036552542822847}
   m_Layer: 5
   m_Name: Drink3
   m_TagString: Untagged
@@ -1390,21 +1468,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6223934109935089333}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &8341404096197125557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4615063800729215583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onHold:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4533190822064266357}
         m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
@@ -1418,6 +1481,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!61 &255618818356462396
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615063800729215583}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 190}
+  m_EdgeRadius: 0
+--- !u!114 &1843036552542822847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615063800729215583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Transparent looking-drink from mint-leaf into mint flavour drink.
 --- !u!1 &4966648264262128107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,7 +1662,8 @@ GameObject:
   - component: {fileID: 2242040524374622027}
   - component: {fileID: 3729197347333652268}
   - component: {fileID: 9209691002912588440}
-  - component: {fileID: 4994873922490611105}
+  - component: {fileID: 7087868584416570114}
+  - component: {fileID: 5821550872011509981}
   m_Layer: 5
   m_Name: Drink4
   m_TagString: Untagged
@@ -1670,21 +1773,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3729197347333652268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &4994873922490611105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5918868477624967307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e9e3636bc448b44b7507b2ccc2df05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onHold:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4533190822064266357}
         m_TargetAssemblyTypeName: DrinkMenu, Assembly-CSharp
@@ -1698,6 +1786,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!61 &7087868584416570114
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918868477624967307}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 290, y: 190}
+  m_EdgeRadius: 0
+--- !u!114 &5821550872011509981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918868477624967307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: ' Drip some different colouring and mix  into alcoholic cold-drink. '
 --- !u!1 &6985647100900450252
 GameObject:
   m_ObjectHideFlags: 0

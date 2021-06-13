@@ -89,6 +89,7 @@ Material:
     - _ColorChangeTolerance: 0.25
     - _ColorChangeTolerance2: 0.25
     - _ColorChangeTolerance3: 0.25
+    - _ColorMask: 15
     - _ColorRampBlend: 1
     - _ColorRampLuminosity: 0
     - _ColorRampOutline: 0
@@ -109,7 +110,7 @@ Material:
     - _FlickerFreq: 0.2
     - _FlickerPercent: 0.05
     - _GhostBlend: 1
-    - _GhostColorBoost: 1
+    - _GhostColorBoost: 2.41
     - _GhostTransparency: 0
     - _GlitchAmount: 3
     - _GlitchSize: 1
@@ -141,8 +142,8 @@ Material:
     - _HsvSaturation: 1
     - _HsvShift: 180
     - _InnerOutlineAlpha: 1
-    - _InnerOutlineGlow: 4
-    - _InnerOutlineThickness: 1
+    - _InnerOutlineGlow: 1
+    - _InnerOutlineThickness: 1.21
     - _MaxXUV: 1
     - _MaxYUV: 1
     - _MinXUV: 0
@@ -152,17 +153,17 @@ Material:
     - _MyDstMode: 10
     - _MySrcMode: 5
     - _NegativeAmount: 1
-    - _OffsetUvX: 0
-    - _OffsetUvY: 0
+    - _OffsetUvX: -0.55
+    - _OffsetUvY: 0.88
     - _OnlyInnerOutline: 0
     - _OnlyOutline: 0
     - _Outline8Directions: 0
-    - _OutlineAlpha: 1
+    - _OutlineAlpha: 0.379
     - _OutlineDistortAmount: 0.5
     - _OutlineDistortTexXSpeed: 5
     - _OutlineDistortTexYSpeed: 5
     - _OutlineDistortToggle: 0
-    - _OutlineGlow: 1.5
+    - _OutlineGlow: 37
     - _OutlineIsPixel: 0
     - _OutlinePixelWidth: 1
     - _OutlineTexGrey: 0
@@ -192,20 +193,25 @@ Material:
     - _ShineLocation: 0.5
     - _ShineRotate: 0
     - _ShineWidth: 0.1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
     - _TextureScrollXSpeed: 1
     - _TextureScrollYSpeed: 0
     - _TwistUvAmount: 1
     - _TwistUvPosX: 0.5
     - _TwistUvPosY: 0.5
     - _TwistUvRadius: 0.75
-    - _WaveAmount: 7
-    - _WaveSpeed: 10
-    - _WaveStrength: 7.5
-    - _WaveX: 0
+    - _WaveAmount: 13.1
+    - _WaveSpeed: 18.8
+    - _WaveStrength: 12.8
+    - _WaveX: 0.544
     - _WaveY: 0.5
     - _ZTestMode: 4
     - _ZWrite: 0
-    - _ZoomUvAmount: 0.5
+    - _ZoomUvAmount: 4.14
     m_Colors:
     - _AlphaOutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -220,15 +226,15 @@ Material:
     - _ColorSwapRed: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 0, b: 0, a: 1}
-    - _GradBotLeftCol: {r: 0, g: 0, b: 1, a: 1}
-    - _GradBotRightCol: {r: 0, g: 0, b: 1, a: 1}
-    - _GradTopLeftCol: {r: 1, g: 0, b: 0, a: 1}
-    - _GradTopRightCol: {r: 1, g: 0, b: 0, a: 1}
+    - _GradBotLeftCol: {r: 0, g: 0.58713096, b: 2.3728964, a: 3.8529098}
+    - _GradBotRightCol: {r: 0, g: 0.45715916, b: 1.8476138, a: 3}
+    - _GradTopLeftCol: {r: 0, g: 0.15238638, b: 0.61587125, a: 1}
+    - _GradTopRightCol: {r: 0, g: 0.30477276, b: 1.2317425, a: 2}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramStripeColor: {r: 0, g: 1, b: 1, a: 1}
     - _InnerOutlineColor: {r: 1, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 1, g: 0, b: 0, a: 1}
     - _OverlayColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShineColor: {r: 1, g: 1, b: 1, a: 1}

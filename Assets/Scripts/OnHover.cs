@@ -91,7 +91,7 @@ public class OnHover : MonoBehaviour
         {
             Vector2 pos = new Vector2(lastMousePoint.x - (Screen.width / 2) - size.x / 2, lastMousePoint.y - (Screen.height / 2) - size.y / 2);
             pos = ProcessPos(pos);
-
+            AudioManager.Instance.PlaySFX("HoverDescriptionOpen", 0.1f);
             if (WindowManager.Instance.IsWindowExist(windowName))
             {
                 WindowManager.Instance.Open(windowName, 0.1f);
@@ -105,6 +105,7 @@ public class OnHover : MonoBehaviour
                 WindowManager.Instance.SetTextSize(windowName, 45f);
                 WindowManager.Instance.SetTextAlignment(windowName, CustomTextAlignment.center);
                 WindowManager.Instance.SetTextWrappingMode(windowName, true);
+                WindowManager.Instance.SetTextEnableSE(windowName, false);
             }
         }
         else

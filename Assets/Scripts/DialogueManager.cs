@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -16,12 +18,14 @@ public class DialogueManager : MonoBehaviour
     [SerializeField, Range(0.0f, 0.5f)] float typeWriterInterval = 0.1f;
     [SerializeField, Range(0.0f, 1f)] float windowOpenSpeed = 0.5f;
     [SerializeField, Range(0.0f, 128f)] float textSize = 64f;
+    [SerializeField] Image bartender, gedeon;
 
     // private
     private Vector2 windowPos, windowSize, nameWindowPos, nameWindowSize, portraitPos, portraitSize, facePos, faceSize;
-    private bool isShowingDialogue, isFirstDialogue, isNameWindowClosed;
+    private bool isShowingDialogue, isFirstDialogue, isNameWindowClosed, wasEnabledDrinkMenu;
     private int indexCount;
     private string currentDialogueName;
+    Dalogue currentDialogData;
 
     public struct Dalogue
     {
@@ -31,19 +35,22 @@ public class DialogueManager : MonoBehaviour
 
         public string portrait;
         public string face;
+
+        public bool isDialog;
     }
 
     private List<Dalogue> dialogueList = new List<Dalogue>();
 
-    public void RegisterDialogue(string text, string name = "", string portrait = "", string face = "")
+    public void RegisterDialogue(string text, string name = "", bool isDialog = true)
     {
         Dalogue tmp;
 
         tmp.name = name;
         tmp.text = text;
-        tmp.portrait = portrait;
-        tmp.face = face;
+        tmp.portrait = "";  // canceled features
+        tmp.face = ""; // canceled features
         tmp.index = indexCount.ToString();
+        tmp.isDialog = isDialog;
 
         dialogueList.Add(tmp);
 
@@ -95,18 +102,24 @@ public class DialogueManager : MonoBehaviour
                     {
                         closeSpeed = !ShouldCloseNameWindow() ? 0.0f : windowOpenSpeed;
                         WindowManager.Instance.Close(currentDialogueName + "(name)", closeSpeed, true);
+
+                        // highlight character
+                        HighlightCharacter(currentDialogData.name, 1.0f);
                     }
                     isShowingDialogue = false;
 
                     if (dialogueList.Count == 0)
                     {
-                        StartCoroutine(NextDialogueDelay(windowOpenSpeed));
+                        if (currentDialogData.isDialog)
+                        {
+                            StartCoroutine(NextDialogueDelay(windowOpenSpeed));
+                        }
                         isFirstDialogue = true;
                         // Enable drink menu
                         if (isFirstDialogue)
                         {
-                            drinkManager.GetDrinkMenu().EnableButton(true);
-                            drinkManager.EnableDrink(true);
+                            drinkManager.GetDrinkMenu().EnableButton(wasEnabledDrinkMenu);
+                            drinkManager.EnableDrink(wasEnabledDrinkMenu);
                         }
                     }
                 }
@@ -151,10 +164,15 @@ public class DialogueManager : MonoBehaviour
             // Disable drink menu
             if (isFirstDialogue)
             {
+                wasEnabledDrinkMenu = drinkManager.GetDrinkMenu().IsEnableButton();
                 drinkManager.GetDrinkMenu().EnableButton(false);
                 drinkManager.EnableDrink(false);
             }
+            // highlight character
+            HighlightCharacter(dialogueList[0].name, 0.75f);
+
             // registered dialogue list
+            currentDialogData = dialogueList[0];
             dialogueList.RemoveAt(0);
             isShowingDialogue = true;
             isFirstDialogue = false;
@@ -189,6 +207,25 @@ public class DialogueManager : MonoBehaviour
     public bool IsShowingDialogue()
     {
         return isShowingDialogue;
+    }
+
+    private void HighlightCharacter(string name, float value)
+    {
+        if (dialogueList[0].name.Length > 0)
+        {
+            float val = 1.0f;
+            if (dialogueList[0].name != "Felix")
+            {
+                val = value;
+            }
+            bartender.DOColor(new Color(val, val, val, bartender.color.a), 0.25f);
+            val = 1.0f;
+            if (dialogueList[0].name != "???" && dialogueList[0].name != "Gedeon")
+            {
+                val = value;
+            }
+            gedeon.DOColor(new Color(val, val, val, gedeon.color.a), 0.25f);
+        }
     }
 }
 
