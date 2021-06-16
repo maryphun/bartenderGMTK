@@ -226,10 +226,10 @@ Material:
     - _ColorSwapRed: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 0, b: 0, a: 1}
-    - _GradBotLeftCol: {r: 0, g: 0.58713096, b: 2.3728964, a: 3.8529098}
-    - _GradBotRightCol: {r: 0, g: 0.45715916, b: 1.8476138, a: 3}
-    - _GradTopLeftCol: {r: 0, g: 0.15238638, b: 0.61587125, a: 1}
-    - _GradTopRightCol: {r: 0, g: 0.30477276, b: 1.2317425, a: 2}
+    - _GradBotLeftCol: {r: 1.526228, g: 0, b: 0.67559385, a: 3.0708811}
+    - _GradBotRightCol: {r: 1.491, g: 0, b: 0.65999997, a: 3}
+    - _GradTopLeftCol: {r: 0.497, g: 0, b: 0.22, a: 1}
+    - _GradTopRightCol: {r: 0.994, g: 0, b: 0.44, a: 2}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramStripeColor: {r: 0, g: 1, b: 1, a: 1}

@@ -204,7 +204,7 @@ public class WindowManager : Singleton<WindowManager>
     }
 
     // ====================================Image====================================
-    public void AddNewImage(string name, string path, Vector2 location, Vector2 size, bool behindWindow = false)
+    public void AddNewImage(string name, string path, Vector2 location, Vector2 size, bool behindWindow = false, float fadeTime = 0.0f)
     {
         Window comp;
         if (GetReference(name, out comp))
@@ -212,7 +212,6 @@ public class WindowManager : Singleton<WindowManager>
             comp.AddNewImage(path, location, size, behindWindow);
         }
     }
-
 
     // ====================================Get====================================
     public bool IsWindowExist(string name)

@@ -204,6 +204,13 @@ public class Window : MonoBehaviour
             // initiate wait time
             float waitTime = isSkipTypeWriter ?  0.0f : interval;
 
+            //don't add text yet if the window is not fully open
+            if (windowState != WindiowState.opened)
+            {
+                yield return new WaitForSeconds(waitTime);
+                continue;
+            }
+
             // process text
             if (CheckHighlightOrange(newText[currentCount].ToString()))
             {

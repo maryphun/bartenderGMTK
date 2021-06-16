@@ -148,9 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Toxic take from viper's tooth. Deadly for some individual. It is very
-    dangerous but some races that immume to poison say it's really good. Although
-    getting served in most bar, not many bartender know the taste of it at all.
+  description: A toxic substance. It is very dangerous and deadly for most individuals.
+    Some races are immune to poison and say they enjoy drinking it.
 --- !u!61 &3312362671782669902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -376,7 +375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Colored Ice Cube
+  m_text: Ice Cubes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}
   m_sharedMaterial: {fileID: -6606262383095326318, guid: 631e6ff9613c1fb44b40ceb05e326636, type: 2}
@@ -479,8 +478,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130.3416, y: 124.4691}
+  m_AnchoredPosition: {x: -0.000028133, y: 7}
+  m_SizeDelta: {x: 162.7642, y: 122.074}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1103757225479783119
 CanvasRenderer:
@@ -510,7 +509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6bfe48a4f5967042897408c710cf451, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -554,7 +553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 9}
   m_SizeDelta: {x: 130.3416, y: 124.4691}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2189132038794154151
@@ -585,7 +584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 533557bcd30f8494aa846457026eabb8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1036,7 +1035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Lime drink with the default zesty flavour.
+  description: Lime flavored drink. It can be drunk on its own or used to add a zesty
+    punch to any beverage.
 --- !u!1 &3898825626323032312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Common yellow beverage with common yellow lemon juice.
+  description: A lemon flavored drink. It contains lemon juice. Packs a punch on
+    its own or can be mixed with another beverage.
 --- !u!1 &3898825627216785049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,7 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Transparent looking-drink from mint-leaf into mint flavour drink.
+  description: A mint flavored liquid that is transparent in appearance.
 --- !u!1 &4966648264262128107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,8 +1555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130.3416, y: 124.4691}
+  m_AnchoredPosition: {x: 0, y: 17}
+  m_SizeDelta: {x: 179.3025, y: 134.4769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3695249680800144714
 CanvasRenderer:
@@ -1585,7 +1586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0143a04f1279bd49ae46b0b5e047fdc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1824,7 +1825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: ' Drip some different colouring and mix  into alcoholic cold-drink. '
+  description: Ice Cubes.  An essential for making a refreshing cocktail or drink.
 --- !u!1 &6985647100900450252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,7 +1860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 12}
   m_SizeDelta: {x: 130.3416, y: 124.4691}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &976233671617495000
@@ -1890,7 +1891,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e726ccbfdaff3ea49a2c07817210c693, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1934,7 +1935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 9}
   m_SizeDelta: {x: 130.3416, y: 124.4691}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3383130425530125493
@@ -1965,7 +1966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce5a8feebc74042468273bf7fd17595a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

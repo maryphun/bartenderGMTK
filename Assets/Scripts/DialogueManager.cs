@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
                         WindowManager.Instance.Close(currentDialogueName + "(name)", closeSpeed, true);
 
                         // highlight character
-                        HighlightCharacter(currentDialogData.name, 1.0f);
+                        //HighlightCharacter(currentDialogData.name, 1.0f);
                     }
                     isShowingDialogue = false;
 
@@ -169,7 +169,7 @@ public class DialogueManager : MonoBehaviour
                 drinkManager.EnableDrink(false);
             }
             // highlight character
-            HighlightCharacter(dialogueList[0].name, 0.75f);
+            //HighlightCharacter(dialogueList[0].name, 0.75f);
 
             // registered dialogue list
             currentDialogData = dialogueList[0];

@@ -162,6 +162,12 @@ public class DrinkManager : MonoBehaviour
                 dialogueManager.RegisterDialogue("Good timing! Now %shake% your cocktail to chill the drink and add dilution.","",false);
                 dialogueManager.RegisterDialogue("Remember, consistency and control are very important in this case.", "", false);
             }
+
+            if (gameStateManager.GetCurrentDialog() == 40)
+            {
+                gameStateManager.ShakeObjects(10f, 3f);
+                AudioManager.Instance.PlaySFX("explosion", 0.10f);
+            }
         }
         else
         {
@@ -211,7 +217,7 @@ public class DrinkManager : MonoBehaviour
         if (_lime > 1 || _lemon > 1|| _mint > 1 || _icecube > 1 || _poison > 1)
         {
             rtn = false;
-            // TODO: play SE
+            AudioManager.Instance.PlaySFX("fail");
             if (!dialogueManager.IsShowingDialogue())
             {
                 // Add dialog if possible.
@@ -219,6 +225,16 @@ public class DrinkManager : MonoBehaviour
                 randomString[0] = "You don't need too much of this.";
                 randomString[1] = "That is too much.";
                 dialogueManager.RegisterDialogue(randomString[Random.Range(0, randomString.Length)], "", false);
+            }
+        }
+        else if (liquidFillPercentage == 0.0f)
+        {
+            rtn = false;
+            AudioManager.Instance.PlaySFX("fail");
+            if (!dialogueManager.IsShowingDialogue())
+            {
+                // Add dialog if possible.
+                dialogueManager.RegisterDialogue("You have to choose an alcohol type as a base first.", "", false);
             }
         }
         else
@@ -352,11 +368,11 @@ public class DrinkManager : MonoBehaviour
         //Debug.Log("<color=yellow>Excited:</color> " + excite.ToString());
         //Debug.Log("<color=lightblue>Anger:</color> " + anger.ToString());
 
-        float red = Mathf.Clamp((hap/2f) + (anger/1.5f) - (surp / 8f) - (sad / 8f) - (excite / 8f), 0f, 1f);
-        float green = Mathf.Clamp((excite/2f) + (surp/1.5f) - (anger / 4f) - (hap / 4f), 0f, 1f);
-        float blue = Mathf.Clamp((sad/1.5f) + (excite/2f) - (hap / 4f) - (anger / 4f), 0f, 1f);
+        float red = Mathf.Clamp((hap / 2f) + (anger / 4f) + (excite / 4f) - (sad+0.001f * 3f), 0f, 1f);
+        float green = Mathf.Clamp((excite / 4f) + (_surprise * 0.75f) - (sad+0.001f * 3f), 0f, 1f);
+        float blue = Mathf.Clamp((hap / 4f) + (anger / 2f) + (excite / 3.5f) - (sad+0.01f * 3f), 0f, 1f);
 
-        if (liquidFillPercentage < 0.25f || _lime == 1 || _lemon == 1 || _mint == 1 || _icecube == 1 || _poison == 1)
+        if (liquidFillPercentage < 0.25f)
         {
             liquidLayer[0] = new Color(red, green, blue);
             liquidLayer[1] = new Color(red, green, blue);
@@ -405,6 +421,15 @@ public class DrinkManager : MonoBehaviour
         anger = Mathf.Clamp(_anger / (_happiness + _sadness + _surprise + _excited + _anger), 0f, 1f);
     }
 
+    public void GetAllIngredientAdded(out bool lemon, out bool lime, out bool mint, out bool ice, out bool poison)
+    {
+        lemon = _lemon == 1;
+        lime = _lime == 1;
+        mint = _mint == 1;
+        ice = _icecube == 1;
+        poison = _poison == 1;
+    }
+
     public void DrinkSuccess()
     {
         Vector2 size = new Vector2(700f, 600f);
@@ -422,43 +447,71 @@ public class DrinkManager : MonoBehaviour
         {
             drinkname = "Iced Dragonica";
             nameColor = Color.magenta;
-            imageName = "01";
+            imageName = "12";
             description = "People drink this during the celebration of traditional Dragonica ceremony.";
+        }
+        else if (hap > 0.10f && sad > 0.10f && surp > 0.10f && excite > 0.10f && anger > 0.10f && _icecube == 1 && _poison == 0)
+        {
+            drinkname = "Long Island Ice Tea";
+            nameColor = new Color(238, 130, 238);   // violet
+            imageName = "01";
+            description = "Who know it will taste like a ice tea after you mix everything?";
         }
         else if (hap > 0.75f && NoLayer())
         {
             drinkname = "Fairies Kiss";
             nameColor = Color.red;
-            imageName = "01";
+            imageName = "12";
             description = "Sometimes you get lazy too. But the good thing is it does actually taste good.";
         }
         else if (sad > 0.75f && NoLayer())
         {
             drinkname = "Black Magic";
             nameColor = Color.black;
-            imageName = "01";
+            imageName = "14";
             description = "When you're in a depression, you lost interest of making a good cocktail.";
         }
         else if (surp > 0.75f && NoLayer())
         {
             drinkname = "Goblin Piss";
             nameColor = Color.yellow;
-            imageName = "01";
-            description = "what a surprise, your customer surely are not ready for it.";
+            imageName = "13";
+            description = "what a surprise, your customer probably are not ready for it even though they think they are.";
         }
         else if (excite > 0.75f && NoLayer())
         {
             drinkname = "Crystal Maiden";
             nameColor = Color.cyan;
-            imageName = "01";
+            imageName = "15";
             description = "Are you really serving this?";
         }
         else if (anger > 0.75f && NoLayer())
         {
             drinkname = "Ōdachi";
             nameColor = Color.white;
-            imageName = "01";
+            imageName = "12";
             description = "A traditional primary liquid comes from the ancient east.";
+        }
+        else if (_poison == 1 && gameStateManager.GetCurrentDialog() == 27)
+        {
+            drinkname = "One last drink";
+            nameColor = new Color(0.54f, 0f, 0f); // dark red
+            imageName = "10";
+            description = "If you ask me to chose what I want to drink right before the end of my life, this is it.";
+        }
+        else if (excite < anger && anger > 0.5f && _icecube == 1 && _lemon == 1 && _poison == 0)
+        {
+            drinkname = "Take A Break";
+            nameColor = Color.magenta;
+            imageName = "16";
+            description = "Cocktail that reminds you of tea break and leisure time with friends.";
+        }
+        else if (excite > anger && anger > 0.4f && _icecube == 1 && _lemon == 1 && _poison == 0)
+        {
+            drinkname = "Misfires";
+            nameColor = Color.red;
+            imageName = "16";
+            description = "One guy who tried to do something but they failed invented this drink.";
         }
         else if (hap + sad + anger + excite + surp == 0.0f)
         {
@@ -471,7 +524,7 @@ public class DrinkManager : MonoBehaviour
         {
             drinkname = "Angry Bird";
             nameColor = Color.red;
-            imageName = "01";
+            imageName = "12";
             description = "One of the modern invented drink, the youngster's favorite.";
         }
         else if (hap > 0.4f && sad > 0.4f && NoLayer())
@@ -485,15 +538,36 @@ public class DrinkManager : MonoBehaviour
         {
             drinkname = "Blue Magic";
             nameColor = Color.blue;
-            imageName = "01";
+            imageName = "15";
             description = "Taste like blue-berry.";
         }
-        else if (hap > 0.10f && sad > 0.10f && surp > 0.15f && excite > 0.10f && anger > 0.10f && _icecube == 1)
+        else if (excite > 0.25f && !NoLayer())
         {
-            drinkname = "Long Island Ice Tea";
-            nameColor = new Color(238, 130, 238);   // violet
+            drinkname = "Crystal Wyvern";
+            nameColor = Color.cyan;
+            imageName = "15";
+            description = "Beverages that name after the well-known dragon that famous for her frost nova.";
+        }
+        else if (surp > 0.25f && !NoLayer())
+        {
+            drinkname = "Land Mines";
+            nameColor = Color.green;
+            imageName = "13";
+            description = "Nothing can bring more surprise than a land mines!";
+        }
+        else if (sad > 0.25f && !NoLayer())
+        {
+            drinkname = "Hollow Knight";
+            nameColor = new Color(0.678f, 0.847f, 0.902f); // lightblue
+            imageName = "15";
+            description = "Named after a character in a tales about an ancient kingdom, Hallownest and a nameless knight.";
+        }
+        else if (anger > 0.25f && !NoLayer())
+        {
+            drinkname = "Moon water";
+            nameColor = new Color(0.678f, 0.847f, 0.902f); // lightblue
             imageName = "01";
-            description = "Who know it will taste like a ice tea after you mix everything?";
+            description = "A cult that praise the moon as god drink this during their prayer.";
         }
         else
         {
@@ -508,7 +582,7 @@ public class DrinkManager : MonoBehaviour
         TMP_Text name = WindowManager.Instance.AddNewText("Success", drinkname, new Vector2(size.x / 2f, size.y / 2f), 72f, nameColor);
         name.alignment = TextAlignmentOptions.TopGeoAligned;
         WindowManager.Instance.AddNewImage("Success", "Drinks/" + imageName, new Vector2(size.x / 2f, size.y / 2f), new Vector2(size.x / 3f, size.x / 3f));
-        WindowManager.Instance.SetText("Success", description, 0.1f);
+        WindowManager.Instance.SetText("Success", description, 0.05f);
         WindowManager.Instance.SetTextSize("Success", 50f);
         WindowManager.Instance.SetTextAlignment("Success", CustomTextAlignment.bottomCenter);
         WindowManager.Instance.SetTextWrappingMode("Success", true);

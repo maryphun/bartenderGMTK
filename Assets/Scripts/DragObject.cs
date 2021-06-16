@@ -7,6 +7,7 @@ using DG.Tweening;
 public class DragObject : MonoBehaviour
 {
     [SerializeField] Slider slider;
+    [SerializeField] Image shakerbottle;
     bool isDragging;
     Vector2 posDif;
     RectTransform rectT;
@@ -80,6 +81,7 @@ public class DragObject : MonoBehaviour
             StartCoroutine(SetActiveDelayLoop(false, 0.5f));
             GetComponent<CanvasGroup>().DOFade(0.0f, 0.5f);
             drinkManager.DrinkSuccess();
+            shakerbottle.DOFade(0f, 0.5f);
         }
     }
 
@@ -103,6 +105,15 @@ public class DragObject : MonoBehaviour
         shakeProgress = 0.0f;
         slider.gameObject.SetActive(boolean);
         slider.GetComponent<CanvasGroup>().DOFade(0.0f, 0.0f);
+
+        if (boolean)
+        {
+            shakerbottle.DOFade(1f, 0.5f);
+        }
+        else
+        {
+            shakerbottle.DOFade(0f, 0.5f);
+        }
     }
 
     private IEnumerator SetActiveDelayLoop(bool boolean, float time)

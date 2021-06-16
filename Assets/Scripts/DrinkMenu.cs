@@ -54,7 +54,7 @@ public class DrinkMenu : MonoBehaviour
         if (boolean)
         {
             drinkManager.FillShaker(0.1f * Time.deltaTime);
-            drinkManager.ChangeParameter(0, 0, 0, 0.012f * Time.deltaTime, 0);
+            drinkManager.ChangeParameter(0, 0, 0.05f * Time.deltaTime, 0, 0);
         }
     }
 

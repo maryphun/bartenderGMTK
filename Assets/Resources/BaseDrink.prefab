@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "\u014Cdachi helps +calming down+ ones mood while provides a %soothing%
-    sensation with a little $bitter$ flavor."
+  description: "\u014Cdachi helps +calm down+ the consumers mood by providing a %soothing%
+    sensation when drunken. It has a $bitter$ flavor which may put off some people."
 --- !u!114 &7225742094610606248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,8 +509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130.3416, y: 124.4691}
+  m_AnchoredPosition: {x: 0, y: 11.5}
+  m_SizeDelta: {x: 149.3468, y: 112.0101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1103757225479783119
 CanvasRenderer:
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd997df73f3ee214a931da6b57afa72c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -584,8 +584,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130.3416, y: 124.4691}
+  m_AnchoredPosition: {x: 0, y: 17.6}
+  m_SizeDelta: {x: 149.3468, y: 112.0101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2189132038794154151
 CanvasRenderer:
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72e2d629561a4874e83649a5debfa9ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Fairies Kiss provides a %bizzare% flavor. It's a +hapiness+ you can
+  description: Fairies Kiss provides a %bizarre% flavor. It's a +hapiness+ you can
     taste. People who don't like $sweet$ stuff won't be a fan of this.
 --- !u!61 &521285614905969949
 BoxCollider2D:
@@ -1262,9 +1262,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Black magic provides a %heart warming% sensation. It make you think
-    of your old scar, something +sad+ that happened. Not great for people who dislike
-    $hot$ beverages.
+  description: Black Magic provides a %heart warming% sensation when drunken. It
+    can remind you of a +sad+ memory. Not recommended for people who dislike $hot$
+    beverages.
 --- !u!114 &3405130790715666015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,8 +1603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Goblin piss provide a %tingly% sensation. It gives one a pleasant
-    +surpsie+ feeling when drink. It is $zesty$.
+  description: Goblin Piss gives a %tingly% sensation and a pleasant +surprise+ when
+    drunken. It has a $zesty$ taste.
 --- !u!114 &4598463488839286631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1681,8 +1681,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130.3416, y: 124.4691}
+  m_AnchoredPosition: {x: 0, y: 15}
+  m_SizeDelta: {x: 149.3468, y: 112.0101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3695249680800144714
 CanvasRenderer:
@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb908dead7563ba40989a90b213771c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1940,8 +1940,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd59fb28a3bc40a679da7e00f8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Crystal Maiden presents as a %bubbly% concoction. It makes ones mood
-    to feels overly +excited+! Not great for people who dislike $gassy$ beverages.
+  description: Crystal Maiden presents as a %bubbly% concoction. It can make the
+    consumer feel overly +excited+! Not recommended for people who dislike $gassy$
+    beverages.
 --- !u!114 &4788718756046250003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2018,8 +2019,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130.3416, y: 124.4691}
+  m_AnchoredPosition: {x: 0, y: 16.1}
+  m_SizeDelta: {x: 149.3468, y: 112.0101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &976233671617495000
 CanvasRenderer:
@@ -2049,7 +2050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4496d6074cb25ce40a6f660feffba87c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2093,8 +2094,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130.3416, y: 124.4691}
+  m_AnchoredPosition: {x: 14, y: 8.4}
+  m_SizeDelta: {x: 149.3468, y: 112.0101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3383130425530125493
 CanvasRenderer:
@@ -2124,7 +2125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e21a34b5e76e8f469140f67308f1465, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9393eb0bf73aaf438f1be445d0229f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
